@@ -2,6 +2,7 @@ cd $HOME
 sudo apt-get install git \
 	vim \
 	htop \
+	xclip \
 	-y
 
 sudo apt autoremove
