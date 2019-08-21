@@ -1,0 +1,19 @@
+cd $HOME
+sudo apt-get install git \
+	vim \
+	htop \
+	-y
+
+sudo apt autoremove
+
+mkdir -p workspace
+cd workspace
+mkdir -p lukesmith
+cd lukesmith
+git clone https://github.com/LukeSmithxyz/dwm.git
+git clone https://github.com/LukeSmithxyz/st.git
+
+cd ~/workspace
+git clone https://github.com/baskerville/sxhkd.git
+
+
