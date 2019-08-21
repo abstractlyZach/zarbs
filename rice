@@ -1,4 +1,7 @@
 cd $HOME
+# set capslock to escape
+sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/symbols/pc
+
 sudo apt-get install git \
 	vim \
 	htop \
