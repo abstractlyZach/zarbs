@@ -10,20 +10,25 @@ sudo apt-get install git \
     	libx11-dev \
 	libxft-dev \
 	libxext-dev \
+	gcc-8 \
 	-y
 
 sudo apt autoremove
 
 mkdir -p workspace
 cd workspace
-mkdir -p lukesmith
 
+mkdir -p lukesmith
 cd lukesmith
 
 git clone https://github.com/LukeSmithxyz/dwm.git
 cd dwm
 sed -i 's/^\(XINERAMALIBS\)/#\1/g' config.mk
 sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
+sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
+sudo make clean install
+# I forgot which site I read this on, but it'll make it add the right file.
+sudo apt-get install dwm -y
 cd ..
 
 git clone https://github.com/LukeSmithxyz/st.git
