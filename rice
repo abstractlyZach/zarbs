@@ -1,4 +1,5 @@
 cp .bashrc $HOME/.bashrc
+cp .profile $HOME/.profile
 mkdir -p $HOME/.config/sxhkd
 cp sxhkdrc $HOME/.config/sxhkd
 
