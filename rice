@@ -1,4 +1,7 @@
 cp .bashrc $HOME/.bashrc
+mkdir -p $HOME/.config/sxhkd
+cp sxhkdrc $HOME/.config/sxhkd
+
 cd $HOME
 # set capslock to escape
 sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/symbols/pc
@@ -10,6 +13,10 @@ sudo apt-get install git \
     	libx11-dev \
 	libxft-dev \
 	libxext-dev \
+	xcb \
+	libxcb-keysyms1-dev \
+	libxcb-ewmh-dev \
+	libxcb-util0-dev \
 	gcc-8 \
 	-y
 
@@ -37,5 +44,10 @@ sudo make clean install
 
 cd ~/workspace
 git clone https://github.com/baskerville/sxhkd.git
+cd sxhkd
+sudo make clean
+sudo make
+sudo make install
 
+cd ~
 
