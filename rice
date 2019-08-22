@@ -49,5 +49,9 @@ sudo make clean
 sudo make
 sudo make install
 
+
 cd ~
+if [ ! -f ~/.xprofile ]; then
+	echo "sxhkd &" > ~/.xprofile
+fi
 

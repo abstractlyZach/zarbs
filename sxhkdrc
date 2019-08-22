@@ -1,0 +1,5 @@
+# Basic binds
+super + Return
+	$TERM
+super + d
+	dmenu_run
