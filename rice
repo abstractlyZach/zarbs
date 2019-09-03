@@ -1,5 +1,5 @@
-cp .bashrc $HOME/.bashrc
-cp .profile $HOME/.profile
+cp dotfiles/.bashrc $HOME/.bashrc
+cp dotfiles/.profile $HOME/.profile
 mkdir -p $HOME/.config/sxhkd
 cp sxhkdrc $HOME/.config/sxhkd
 
@@ -18,6 +18,9 @@ sudo apt-get install git \
 	libxcb-keysyms1-dev \
 	libxcb-ewmh-dev \
 	libxcb-util0-dev \
+	libxinerama-dev \
+	libxinerama1 \
+	libxinerama1-dbg \
 	gcc-8 \
 	-y
 
@@ -31,8 +34,8 @@ cd lukesmith
 
 git clone https://github.com/LukeSmithxyz/dwm.git
 cd dwm
-sed -i 's/^\(XINERAMALIBS\)/#\1/g' config.mk
-sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
+#sed -i 's/^\(XINERAMALIBS\)/#\1/g' config.mk
+#sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
 sudo make clean install
 # I forgot which site I read this on, but it'll make it add the right file.
