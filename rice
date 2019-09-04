@@ -1,5 +1,6 @@
 cp dotfiles/.bashrc $HOME/.bashrc
 cp dotfiles/.profile $HOME/.profile
+cp dotfiles/.xprofile $HOME/.xprofile
 mkdir -p $HOME/.config/sxhkd
 cp sxhkdrc $HOME/.config/sxhkd
 
@@ -46,6 +47,12 @@ sudo apt-get install \
 
 # for chromecasting stuff
 sudo apt-get install mkchromecast -y
+
+sudo apt-get install ranger -y
+sudo apt-get install tree -y
+
+# notification daemon
+sudo apt-get install dunst -y
 
 sudo apt autoremove
 

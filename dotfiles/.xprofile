@@ -1,0 +1,3 @@
+dwmbar &	# status bar
+dunst &		# notification daemon
+sxhkd &		# used for binding hotkeys
