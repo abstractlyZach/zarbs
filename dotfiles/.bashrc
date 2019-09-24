@@ -118,3 +118,5 @@ fi
 
 export EDITOR=vim
 set -o vi
+
+source .profile

@@ -1,7 +1,10 @@
+cp dotfiles/.vimrc $HOME/.vimrc
 cp dotfiles/.bashrc $HOME/.bashrc
 cp dotfiles/.profile $HOME/.profile
 cp dotfiles/.xprofile $HOME/.xprofile
 cp dotfiles/.Xdefaults $HOME/.Xdefaults
+xrdb $HOME/.Xdefaults
+cp dotfiles/.bash_profile $HOME/.bash_profile
 mkdir -p $HOME/.config/sxhkd
 cp sxhkdrc $HOME/.config/sxhkd
 
@@ -58,13 +61,25 @@ sudo apt-get install xcompmgr -y
 # video player
 sudo apt-get install vlc -y
 
+sudo apt-get install python-pip -y
+sudo apt-get install virtualenv -y
+
+pip install virtualenvwrapper
+
 sudo apt-get install ranger -y
 sudo apt-get install tree -y
 
 # notification daemon
 sudo apt-get install dunst -y
 
+sudo apt-get install zsh -y 
+
 sudo apt autoremove
+
+sudo snap install spotify
+
+# powerline for vim
+pip install powerline-status
 
 mkdir -p workspace
 cd workspace
