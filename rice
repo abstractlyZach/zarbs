@@ -1,12 +1,20 @@
-cp dotfiles/.vimrc $HOME/.vimrc
-cp dotfiles/.bashrc $HOME/.bashrc
-cp dotfiles/.profile $HOME/.profile
-cp dotfiles/.xprofile $HOME/.xprofile
-cp dotfiles/.Xdefaults $HOME/.Xdefaults
+name=zach
+dotfilesrepo="https://github.com/abstractlyZach/dotfiles.git"
+
+putgitrepo() { # Downlods a gitrepo $1 and places the files in $2 only overwriting conflicts
+	[ -z "$3" ] && branch="master" || branch="$repobranch"
+	dialog --infobox "Downloading and installing config files..." 4 60
+	dir=$(mktemp -d)
+	[ ! -d "$2" ] && mkdir -p "$2"
+	sudo -u "$name" git clone -b "$branch" --depth 1 "$1" "$dir/gitrepo" >/dev/null 2>&1 &&
+	sudo -u "$name" cp -rfT "$dir/gitrepo" "$2"
+}
+
+# Install the dotfiles in the user's home directory
+putgitrepo "$dotfilesrepo" "/home/$name" "$repobranch"
+rm -f "/home/$name/README.md" "/home/$name/LICENSE"
+
 xrdb $HOME/.Xdefaults
-cp dotfiles/.bash_profile $HOME/.bash_profile
-mkdir -p $HOME/.config/sxhkd
-cp sxhkdrc $HOME/.config/sxhkd
 
 cd $HOME
 # set capslock to escape
