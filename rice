@@ -85,6 +85,8 @@ sudo apt-get install dialog -y
 
 sudo apt-get install zsh -y 
 
+sudo apt-get install neovim -y
+
 sudo apt autoremove
 
 sudo snap install spotify
