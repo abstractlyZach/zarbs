@@ -72,6 +72,9 @@ sudo apt-get install tree -y
 # notification daemon
 sudo apt-get install dunst -y
 
+# cmdline dialog
+sudo apt-get install dialog -y
+
 sudo apt-get install zsh -y 
 
 sudo apt autoremove
