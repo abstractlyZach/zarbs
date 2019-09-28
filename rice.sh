@@ -121,6 +121,8 @@ sudo make clean
 sudo make
 sudo make install
 
+sudo apt-get install zsh-syntax-highlighting -y
+
 
 cd ~
 if [ ! -f ~/.xprofile ]; then
