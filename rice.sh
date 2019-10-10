@@ -85,8 +85,6 @@ sudo apt-get install dialog -y
 
 sudo apt-get install zsh -y 
 
-sudo apt-get install neovim -y
-
 sudo apt autoremove
 
 sudo snap install spotify
@@ -106,7 +104,7 @@ cd dwm
 #sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
 sudo make clean install
-# I forgot which site I read this on, but it'll make it add the right file.
+# I forgot which site I read this on, but it'll make it add the right file to the right place
 sudo apt-get install dwm -y
 cd ..
 
@@ -122,6 +120,10 @@ sudo make
 sudo make install
 
 sudo apt-get install zsh-syntax-highlighting -y
+
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim -y
 
 
 cd ~
