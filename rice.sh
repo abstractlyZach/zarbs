@@ -121,6 +121,7 @@ sudo make install
 
 sudo apt-get install zsh-syntax-highlighting -y
 
+# add new stable version of nvim. for some reason the one on apt uses 0.2.2 which has a bug with cursor shapes in st -_-
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim -y
