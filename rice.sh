@@ -13,6 +13,7 @@ putgitrepo() { # Downlods a gitrepo $1 and places the files in $2 only overwriti
 # Install the dotfiles in the user's home directory
 putgitrepo "$dotfilesrepo" "/home/$name" "$repobranch"
 rm -f "/home/$name/README.md" "/home/$name/LICENSE"
+rm -f "/home/$name/.config/nvim/autoload/plug.vim"
 
 xrdb $HOME/.Xresources
 
@@ -122,7 +123,7 @@ sudo make install
 sudo apt-get install zsh-syntax-highlighting -y
 
 # add new stable version of nvim. for some reason the one on apt uses 0.2.2 which has a bug with cursor shapes in st -_-
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt-get update
 sudo apt-get install neovim -y
 
