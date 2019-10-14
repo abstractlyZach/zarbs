@@ -13,6 +13,7 @@ putgitrepo() { # Downlods a gitrepo $1 and places the files in $2 only overwriti
 # Install the dotfiles in the user's home directory
 putgitrepo "$dotfilesrepo" "/home/$name" "$repobranch"
 rm -f "/home/$name/README.md" "/home/$name/LICENSE"
+rm -rf "/home/$name/.git/"
 rm -f "/home/$name/.config/nvim/autoload/plug.vim"
 
 xrdb $HOME/.Xresources
