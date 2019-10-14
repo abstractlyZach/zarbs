@@ -127,6 +127,8 @@ sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt-get update
 sudo apt-get install neovim -y
 
+sudo apt-get install screenkey -y
+
 
 cd ~
 if [ ! -f ~/.xprofile ]; then
