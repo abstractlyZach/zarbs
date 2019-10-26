@@ -130,6 +130,8 @@ sudo apt-get install neovim -y
 
 sudo apt-get install screenkey -y
 
+git clone git@github.com:abstractlyZach/utils.git ~/bin
+
 
 cd ~
 if [ ! -f ~/.xprofile ]; then
