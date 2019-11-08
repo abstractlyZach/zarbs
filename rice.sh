@@ -44,6 +44,9 @@ sudo apt-get install git \
 
 sudo apt-get install curl -y
 
+# fancy way of getting system information
+sudo apt-get install neofetch -y
+
 # gstreamer utility for watching videos on online players
 sudo apt-get install \
 	libgstreamer1.0-0 \
