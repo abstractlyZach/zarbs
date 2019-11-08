@@ -71,6 +71,9 @@ sudo apt-get install xcompmgr -y
 # video player
 sudo apt-get install vlc -y
 
+# background image
+sudo apt-get install feh -y
+
 sudo apt-get install python-pip -y
 sudo apt-get install virtualenv -y
 
@@ -130,7 +133,7 @@ sudo apt-get install neovim -y
 
 sudo apt-get install screenkey -y
 
-git clone git@github.com:abstractlyZach/utils.git ~/bin
+git clone https://github.com/abstractlyZach/utils.git ~/bin
 
 
 cd ~
