@@ -132,6 +132,10 @@ sudo apt-get install zathura -y
 # fonts for emojis in st
 sudo apt-get install fonts-symbola -y
 
+# fuzzy finder
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 git clone git@github.com:abstractlyZach/utils.git ~/bin
 
 
