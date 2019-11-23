@@ -126,7 +126,13 @@ sudo apt-get install neovim -y
 
 sudo apt-get install screenkey -y
 
-git clone https://github.com/abstractlyZach/utils.git ~/bin
+# pdf viewer
+sudo apt-get install zathura -y
+
+# fonts for emojis in st
+sudo apt-get install fonts-symbola -y
+
+git clone git@github.com:abstractlyZach/utils.git ~/bin
 
 
 cd ~
