@@ -13,7 +13,7 @@ if [ -z "$repo_src" ] || [ -z "$target_directory" ]; then
 fi
 
 if [ -d "$target_directory" ]; then
-	echo "Directory already exists. Pulling..."
+	echo "Directory $(realpath $target_directory) already exists. Pulling..."
 	cd $target_directory
 	git pull
 else
