@@ -148,3 +148,4 @@ if [ ! -f ~/.xprofile ]; then
 	echo "sxhkd &" > ~/.xprofile
 fi
 
+sudo apt-get install stow -y
