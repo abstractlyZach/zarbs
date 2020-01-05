@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# Use git to clone a repo into a directory. If the directory exists, then git pull.
+
+repo_src=$1
+target_directory=$2
+
+if [ -z "$repo_src" ] || [ -z "$target_directory" ]; then
+	echo "clone_or_pull: Missing an argument!"
+	echo "USAGE:"
+	echo "	clone_or_pull repo_src target_directory"
+	exit 1
+fi
+
+if [ -d "$target_directory" ]; then
+	echo "Directory already exists. Pulling..."
+	cd $target_directory
+	git pull
+else
+	echo "Cloning into $(realpath $target_directory)"
+	git clone "$repo_src" "$target_directory"
+fi
