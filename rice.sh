@@ -1,3 +1,6 @@
+# exit on errors
+set -e
+
 name=zach
 
 dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
@@ -103,8 +106,13 @@ cd workspace
 mkdir -p lukesmith
 cd lukesmith
 
-git clone https://github.com/LukeSmithxyz/dwm.git
-cd dwm
+if [ -d dwm ]; then
+	cd dwm
+	git pull 
+else
+	git clone https://github.com/LukeSmithxyz/dwm.git
+	cd dwm
+fi
 #sed -i 's/^\(XINERAMALIBS\)/#\1/g' config.mk
 #sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
@@ -113,13 +121,23 @@ sudo make clean install
 sudo apt-get install dwm -y
 cd ..
 
-git clone https://github.com/LukeSmithxyz/st.git
-cd st
+if [ -d st ]; then
+	cd st
+	git pull 
+else
+	git clone https://github.com/LukeSmithxyz/st.git
+	cd st
+fi
 sudo make clean install
 
 cd ~/workspace
-git clone https://github.com/baskerville/sxhkd.git
-cd sxhkd
+if [ -d sxhkd ]; then
+	cd sxhkd
+	git pull 
+else
+	git clone https://github.com/baskerville/sxhkd.git
+	cd sxhkd
+fi
 sudo make clean
 sudo make
 sudo make install
