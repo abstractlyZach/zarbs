@@ -1,0 +1,47 @@
+program name, comments
+git,
+htop,
+xclip,
+libx11-dev,
+libxft-dev,
+libxext-dev,
+xcb,
+libxcb-keysyms1-dev,
+libxcb-ewmh-dev,
+libxcb-util0-dev,
+libxinerama-dev,
+libxinerama1,
+libxinerama1-dbg,
+gcc-8,
+curl,
+neofetch,display system information in an easy-to-read manner
+libgstreamer1.0-0,for watching videos on online players (like youtube)
+gstreamer1.0-plugins-base,
+gstreamer1.0-plugins-good,
+gstreamer1.0-plugins-bad,
+gstreamer1.0-plugins-ugly,
+gstreamer1.0-libav,
+gstreamer1.0-doc,
+gstreamer1.0-tools,
+gstreamer1.0-x,
+gstreamer1.0-alsa,
+gstreamer1.0-gl,
+gstreamer1.0-gtk3,
+gstreamer1.0-qt5,
+gstreamer1.0-pulseaudio,
+xcompmgr,window transparency manager
+vlc,video player
+feh,for setting the background image
+python-pip,
+virtualenv,
+ranger,
+tree,
+dunst,notification manager
+dialog,
+zsh,best shell
+neovim,extensible well-maintained fork of vim
+zsh-syntax-highlighting,
+screenkey,shows keypresses on your screen. good for showing viewers what you're doing
+zathura,pdf-viewer
+fonts-symbola,fonts for emojis in st
+stow,symlink manager. used in the dotfiles repo at ~/.config
