@@ -1,19 +1,20 @@
 # exit on errors
 set -e
 
+alias clone_or_pull=$(realpath clone_or_pull)
+
+# prompt user for sudo immediately instead of having to wait
+# using this approach because I don't know a better one
+sudo ls >/dev/null
+
 name=zach
 
 dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
 
 # Install the dotfiles in the user's home directory
 config_directory="$HOME/.config"
-if [ -d $config_directory ]; then
-	cd $config_directory
-	git pull
-else
-	git clone "$dotfiles_repo" $config_directory
-	cd $config_directory
-fi
+clone_or_pull "$dotfiles_repo" "$config_directory"
+cd "$config_directory"
 make
 
 xrdb $HOME/.Xresources
@@ -106,13 +107,8 @@ cd workspace
 mkdir -p lukesmith
 cd lukesmith
 
-if [ -d dwm ]; then
-	cd dwm
-	git pull 
-else
-	git clone https://github.com/LukeSmithxyz/dwm.git
-	cd dwm
-fi
+clone_or_pull "https://github.com/LukeSmithxyz/dwm.git" dwm
+cd dwm
 #sed -i 's/^\(XINERAMALIBS\)/#\1/g' config.mk
 #sed -i 's/^\(XINERAMAFLAGS\)/#\1/g' config.mk
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
@@ -121,23 +117,13 @@ sudo make clean install
 sudo apt-get install dwm -y
 cd ..
 
-if [ -d st ]; then
-	cd st
-	git pull 
-else
-	git clone https://github.com/LukeSmithxyz/st.git
-	cd st
-fi
+clone_or_pull "https://github.com/LukeSmithxyz/st.git" st
+cd st
 sudo make clean install
 
 cd ~/workspace
-if [ -d sxhkd ]; then
-	cd sxhkd
-	git pull 
-else
-	git clone https://github.com/baskerville/sxhkd.git
-	cd sxhkd
-fi
+clone_or_pull "https://github.com/baskerville/sxhkd.git" sxhkd
+cd sxhkd
 sudo make clean
 sudo make
 sudo make install
@@ -166,12 +152,7 @@ sudo apt-get install fonts-symbola -y
 # 	~/.fzf/install
 # fi
 
-if [ -d $HOME/bin ]; then
-	cd $HOME/bin
-	git pull
-else
-	git clone git@github.com:abstractlyZach/utils.git ~/bin
-fi
+clone_or_pull "git@github.com:abstractlyZach/utils.git" ~/bin
 
 
 cd ~
@@ -180,3 +161,6 @@ if [ ! -f ~/.xprofile ]; then
 fi
 
 sudo apt-get install stow -y
+
+echo "Complete!"
+echo
