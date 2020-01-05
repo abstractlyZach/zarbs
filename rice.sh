@@ -1,10 +1,17 @@
 name=zach
 
+dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
+
 # Install the dotfiles in the user's home directory
-./copy_dotfiles.sh
-rm -f "/home/$name/README.md" "/home/$name/LICENSE"
-rm -rf "/home/$name/.git/"
-rm -f "/home/$name/.config/nvim/autoload/plug.vim"
+config_directory="$HOME/.config"
+if [ -d $config_directory ]; then
+	cd $config_directory
+	git pull
+else
+	git clone "$dotfiles_repo" $config_directory
+	cd $config_directory
+fi
+make
 
 xrdb $HOME/.Xresources
 
