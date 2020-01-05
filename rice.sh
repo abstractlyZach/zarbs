@@ -126,7 +126,8 @@ sudo make install
 
 sudo apt-get install zsh-syntax-highlighting -y
 
-sudo apt-get install notify-send -y
+# this one can't be found in the apt anymore??
+# sudo apt-get install notify-send -y
 
 # add new stable version of nvim. for some reason the one on apt uses 0.2.2 which has a bug with cursor shapes in st -_-
 sudo add-apt-repository ppa:neovim-ppa/stable -y
@@ -147,7 +148,12 @@ sudo apt-get install fonts-symbola -y
 # 	~/.fzf/install
 # fi
 
-git clone git@github.com:abstractlyZach/utils.git ~/bin
+if [ -d $HOME/bin ]; then
+	cd $HOME/bin
+	git pull
+else
+	git clone git@github.com:abstractlyZach/utils.git ~/bin
+fi
 
 
 cd ~
