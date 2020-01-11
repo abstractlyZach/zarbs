@@ -1,0 +1,21 @@
+tag,program,description
+,nvim,for that good editor
+,zsh,
+T,koekeishiya/formulae,tap for yabai
+,yabai,tiling window manager
+,koekeishiya/formulae/skhd,picks up keypresses and allows you to bind them
+,coreutils,GNU core utilities. ex. BSD's ls doesn't support long flags
+,postgresql,
+,entr,for automatically doing stuff when files change. good for doing an auto-compile type workflow
+,terminal-notifier,create notifications on OSX!
+,htop,viewing computer processes
+,pandoc,simple but powerful document converter
+,neofetch,display system information
+T,zegervdv/zathura,tap for zathura https://github.com/zegervdv/homebrew-zathura
+,zathura,pdf reader
+,zathura-pdf-poppler,
+,stow,symlink manager (for dotfiles)
+,tree,view file systems as a tree
+,ranger,file manager
+C,keycastr,display keypresses on the screen
+C,kitty,the fast terminal emulator

@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+
+PROGRAMS_FILE="programs.mac"
+
+brew_install() {
+	echo "brew install $1"
+}
+
+brew_cask_install() {
+	echo "brew cask install $1"
+}
+
+brew_tap() {
+	echo "brew tap $1"
+}
+
+# ignore the first line (headers)
+# https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
+tail -n +2 "$PROGRAMS_FILE" > /tmp/programs.csv
+
+while IFS="," read -r tag program description; do
+	case "$tag" in
+		"C") brew_cask_install "$program";;
+		"T") brew_tap "$program";;
+		*) brew_install "$program";;
+	esac
+done < /tmp/programs.csv
