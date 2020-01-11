@@ -1,5 +1,12 @@
 #!/usr/bin/env sh
 
+# exit on errors
+set -e
+
+config_directory="$HOME/.config"
+dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
+alias clone_or_pull=$(realpath clone_or_pull)
+
 # install homebrew
 # THE OSX package manager: https://brew.sh/
 if brew -h >/dev/null 2>&1; then
@@ -22,6 +29,15 @@ fi
 
 ./install_mac_programs
 
+# Install the dotfiles in the user's home directory
+clone_or_pull "$dotfiles_repo" "$config_directory"
+cd "$config_directory"
+make osx
 
 brew services start skhd
 brew services start yabai
+
+clone_or_pull "git@github.com:abstractlyZach/utils.git" ~/bin
+
+echo "Complete!"
+echo
