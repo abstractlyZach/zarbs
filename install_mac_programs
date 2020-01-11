@@ -4,15 +4,15 @@
 PROGRAMS_FILE="programs.mac"
 
 brew_install() {
-	echo "brew install $1"
+	brew install "$1"
 }
 
 brew_cask_install() {
-	echo "brew cask install $1"
+	brew cask install "$1"
 }
 
 brew_tap() {
-	echo "brew tap $1"
+	brew tap "$1"
 }
 
 # ignore the first line (headers)
