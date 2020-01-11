@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+set -x # echo commands
 
 PROGRAMS_FILE="osx_programs.csv"
 

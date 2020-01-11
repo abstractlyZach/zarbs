@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-# exit on errors
-set -e
+set -e # exit on errors
+set -x # echo commands
 
 alias clone_or_pull=$(realpath clone_or_pull)
 dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"

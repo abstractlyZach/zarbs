@@ -2,6 +2,8 @@
 
 # install all the programs in programs.csv
 
+set -x # echo commands
+
 # ignore the first line (headers)
 # https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
 tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv

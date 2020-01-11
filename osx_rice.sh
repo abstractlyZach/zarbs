@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-# exit on errors
-set -e
+set -e # exit on errors
+set -x # echo commands
 
 config_directory="$HOME/.config"
 dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
