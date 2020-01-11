@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 
-PROGRAMS_FILE="programs.mac"
+PROGRAMS_FILE="osx_programs.csv"
 
 brew_install() {
 	brew install "$1"
