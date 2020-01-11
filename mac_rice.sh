@@ -27,7 +27,7 @@ fi
 # turn off workspace slide animation
 # Accessibility > Display > reduce motion
 
-./install_mac_programs
+./osx_install_programs
 
 # Install the dotfiles in the user's home directory
 clone_or_pull "$dotfiles_repo" "$config_directory"
