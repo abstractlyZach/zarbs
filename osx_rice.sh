@@ -27,6 +27,11 @@ fi
 # turn off workspace slide animation
 # Accessibility > Display > reduce motion
 
+# install Ubersicht
+# turn on scripting support with ScriptEditor 
+# https://github.com/felixhageloh/uebersicht
+# (Scripting Support section)
+
 ./osx_install_programs
 
 # Install the dotfiles in the user's home directory
