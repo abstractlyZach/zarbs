@@ -5,6 +5,7 @@ set -x # echo commands
 
 config_directory="$HOME/.config"
 dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
+# alias this command to the script in this directory
 alias clone_or_pull=$(realpath clone_or_pull)
 
 # install homebrew
