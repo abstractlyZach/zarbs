@@ -42,7 +42,7 @@ sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/s
 mkdir -p ~/workspace/lukesmith
 
 dwm_dir=~/workspace/dwm
-clone_or_pull "https://github.com/abstractlyZach/dwm.git" "$dwm_dir" 
+clone_or_pull "git@github.com:abstractlyZach/dwm.git" "$dwm_dir"
 cd "$dwm_dir"
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
 sudo make clean install
@@ -50,7 +50,7 @@ sudo make clean install
 sudo apt-get install dwm -y
 
 st_dir=~/workspace/st
-clone_or_pull "https://github.com/abstractlyZach/st.git" "$st_dir"
+clone_or_pull "git@github.com:abstractlyZach/st.git" "$st_dir"
 cd "$st_dir"
 sudo make clean install
 
