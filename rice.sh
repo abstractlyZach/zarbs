@@ -41,16 +41,16 @@ sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/s
 
 mkdir -p ~/workspace/lukesmith
 
-dwm_dir=~/workspace/lukesmith/dwm
-clone_or_pull "https://github.com/LukeSmithxyz/dwm.git" "$dwm_dir" 
+dwm_dir=~/workspace/dwm
+clone_or_pull "https://github.com/abstractlyZach/dwm.git" "$dwm_dir" 
 cd "$dwm_dir"
 sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
 sudo make clean install
 # I forgot which site I read this on, but it'll make it add the right file to the right place
 sudo apt-get install dwm -y
 
-st_dir=~/workspace/lukesmith/st
-clone_or_pull "https://github.com/LukeSmithxyz/st.git" "$st_dir"
+st_dir=~/workspace/st
+clone_or_pull "https://github.com/abstractlyZach/st.git" "$st_dir"
 cd "$st_dir"
 sudo make clean install
 
