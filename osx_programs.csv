@@ -5,6 +5,7 @@ T,koekeishiya/formulae,tap for yabai
 ,yabai,tiling window manager
 ,koekeishiya/formulae/skhd,picks up keypresses and allows you to bind them
 ,coreutils,GNU core utilities. ex. BSD's ls doesn't support long flags
+,findutils,GNU finder utils (find, xargs, locate)
 ,postgresql,
 ,entr,for automatically doing stuff when files change. good for doing an auto-compile type workflow
 ,terminal-notifier,create notifications on OSX!
@@ -19,3 +20,4 @@ T,zegervdv/zathura,tap for zathura https://github.com/zegervdv/homebrew-zathura
 ,ranger,file manager
 C,keycastr,display keypresses on the screen
 C,kitty,the fast terminal emulator
+,fzf,super useful fuzzy-finder
