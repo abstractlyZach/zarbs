@@ -21,7 +21,7 @@ sudo apt-get update
 ./ubuntu_install_programs
 
 sudo snap install spotify
-sudo apt autoremove
+sudo apt autoremove -y
 
 pip install virtualenvwrapper
 
