@@ -25,11 +25,13 @@ sudo apt autoremove -y
 
 pip install virtualenvwrapper
 
+# TODO: make the git clone for config clobber the old .config dir.
 
 # Install the dotfiles in the user's home directory
 config_directory="$HOME/.config"
 clone_or_pull "$dotfiles_repo" "$config_directory"
 cd "$config_directory"
+# TODO: clean out the old .profile file
 make
 
 # load the Xresources file
@@ -41,6 +43,7 @@ sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/s
 
 mkdir -p ~/workspace/lukesmith
 
+# TODO figure out how to get github access
 dwm_dir=~/workspace/dwm
 clone_or_pull "git@github.com:abstractlyZach/dwm.git" "$dwm_dir"
 cd "$dwm_dir"
