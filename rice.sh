@@ -34,9 +34,6 @@ cd "$config_directory"
 # TODO: clean out the old .profile file
 make
 
-# load the Xresources file
-xrdb $HOME/.Xresources
-
 # set capslock to escape
 sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/symbols/pc
 
