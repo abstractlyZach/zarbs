@@ -35,6 +35,9 @@ fi
 
 ./osx_install_programs
 
+# add python support for nvim
+python3 -m pip install --user --upgrade pynvim
+
 # Install the dotfiles in the user's home directory
 clone_or_pull "$dotfiles_repo" "$config_directory"
 cd "$config_directory"
