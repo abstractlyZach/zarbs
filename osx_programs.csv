@@ -21,3 +21,5 @@ T,zegervdv/zathura,tap for zathura https://github.com/zegervdv/homebrew-zathura
 C,keycastr,display keypresses on the screen
 C,kitty,the fast terminal emulator
 ,fzf,super useful fuzzy-finder
+,pyenv,for managing and installing multiple python versions
+N,spaceship-prompt,a handy prompt for zsh
