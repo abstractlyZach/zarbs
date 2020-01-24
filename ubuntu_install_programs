@@ -11,3 +11,9 @@ tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
 while IFS="," read -r program comment; do
     sudo apt-get install $program -y
 done < /tmp/programs.csv
+
+# install spaceship prompt for zsh.
+# normally I would write this in the loop like the other programs
+# but it has unsafe perms and I don't quite know how unsafe that is.
+# so I think it makes sense to keep this in its own area
+sudo npm install -g spaceship-prompt --unsafe-perm=true

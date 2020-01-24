@@ -45,3 +45,4 @@ screenkey,shows keypresses on your screen. good for showing viewers what you're 
 zathura,pdf-viewer
 fonts-symbola,fonts for emojis in st
 stow,symlink manager. used in the dotfiles repo at ~/.config
+npm,node package manager
