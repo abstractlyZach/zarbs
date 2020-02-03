@@ -46,3 +46,4 @@ zathura,pdf-viewer
 fonts-symbola,fonts for emojis in st
 stow,symlink manager. used in the dotfiles repo at ~/.config
 npm,node package manager
+pandoc,markup converter
