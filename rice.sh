@@ -38,8 +38,6 @@ make
 sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/symbols/pc
 
 
-mkdir -p ~/workspace/lukesmith
-
 # TODO figure out how to get github access
 dwm_dir=~/workspace/dwm
 clone_or_pull "git@github.com:abstractlyZach/dwm.git" "$dwm_dir"
