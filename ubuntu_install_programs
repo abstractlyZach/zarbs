@@ -24,3 +24,7 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/workspace/fzf
+~/workspace/fzf/install
