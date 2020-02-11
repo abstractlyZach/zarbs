@@ -3,6 +3,7 @@
 # install all the programs in programs.csv
 
 set -x # echo commands
+set -e # exit on failure
 
 # ignore the first line (headers)
 # https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
