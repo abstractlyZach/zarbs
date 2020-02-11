@@ -47,6 +47,5 @@ fonts-symbola,fonts for emojis in st
 stow,symlink manager. used in the dotfiles repo at ~/.config
 npm,node package manager
 pandoc,markup converter
-fzf,fuzzy-finder
 texlive-xetex,pdflatex for converting stuff to pdf
-parsec,remote desktop controller
+/tmp/parsec.deb,remote desktop controller

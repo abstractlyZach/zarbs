@@ -5,6 +5,9 @@
 set -x # echo commands
 set -e # exit on failure
 
+# download the parsec .deb file
+curl https://builds.parsecgaming.com/package/parsec-linux.deb -o /tmp/parsec.deb
+
 # ignore the first line (headers)
 # https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
 tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
@@ -12,6 +15,9 @@ tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
 while IFS="," read -r program comment; do
     sudo apt-get install $program -y
 done < /tmp/programs.csv
+
+# cleanup parsec file
+rm /tmp/parsec.deb
 
 # install spaceship prompt for zsh.
 # normally I would write this in the loop like the other programs
@@ -27,5 +33,5 @@ sudo apt update
 sudo apt install brave-browser
 
 # install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/workspace/fzf
+./clone_or_pull https://github.com/junegunn/fzf.git ~/workspace/fzf
 ~/workspace/fzf/install
