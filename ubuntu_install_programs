@@ -38,4 +38,4 @@ sudo apt install brave-browser
 
 # install fzf
 ./clone_or_pull https://github.com/junegunn/fzf.git ~/workspace/fzf
-~/workspace/fzf/install
+~/workspace/fzf/install --bin
