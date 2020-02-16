@@ -12,8 +12,11 @@ curl https://builds.parsecgaming.com/package/parsec-linux.deb -o /tmp/parsec.deb
 # https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
 tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
 
-while IFS="," read -r program comment; do
-    sudo apt-get install $program -y
+while IFS="," read -r tag program comment; do
+    case "$tag" in
+	"P3") sudo pip3 install --user "$program";;
+	*) sudo apt-get install "$program" -y;;
+    esac
 done < /tmp/programs.csv
 
 # cleanup parsec file
