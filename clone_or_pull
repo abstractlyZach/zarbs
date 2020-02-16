@@ -18,5 +18,5 @@ if [ -d "$target_directory" ]; then
 	git pull
 else
 	echo "Cloning into $(realpath $target_directory)"
-	git clone "$repo_src" "$target_directory"
+	git clone --depth 1 "$repo_src" "$target_directory"
 fi
