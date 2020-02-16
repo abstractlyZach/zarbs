@@ -34,7 +34,6 @@ tag,program name, comments
 ,feh,for setting the background image
 ,python-pip,
 ,virtualenv,
-,ranger,
 ,tree,
 ,dunst,notification manager
 ,dialog,
@@ -51,4 +50,3 @@ tag,program name, comments
 ,/tmp/parsec.deb,remote desktop controller
 ,python3-pip,
 P3,ueberzug,for previewing files in ranger
-
