@@ -15,7 +15,7 @@ tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
 while IFS="," read -r tag program comment; do
     case "$tag" in
 	"P3") sudo pip3 install --user "$program";;
-	"G") ./clone_or_pull "$program" && sudo make clean install;;
+	"G") ./clone_or_pull "$program" ~/workspace/"$program" && sudo make clean install;;
 	*) sudo apt-get install "$program" -y;;
     esac
 done < /tmp/programs.csv
