@@ -50,3 +50,4 @@ tag,program name, comments
 ,/tmp/parsec.deb,remote desktop controller
 ,python3-pip,
 P3,ueberzug,for previewing files in ranger
+G,https://github.com/ranger/ranger.git,file manager with vim bindings
