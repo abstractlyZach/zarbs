@@ -5,6 +5,15 @@
 set -x # echo commands
 set -e # exit on failure
 
+git_install() {
+    program_name="$(basename $1 '.git')"
+    target_directory=~/workspace/"$program_name"
+    ./clone_or_pull "$1" "$target_directory" 
+    cd "$target_directory"
+    sudo make clean install
+    cd -
+}
+
 # download the parsec .deb file
 curl https://builds.parsecgaming.com/package/parsec-linux.deb -o /tmp/parsec.deb
 
@@ -15,7 +24,7 @@ tail -n +2 ubuntu_programs.csv  > /tmp/programs.csv
 while IFS="," read -r tag program comment; do
     case "$tag" in
 	"P3") sudo pip3 install --user "$program";;
-	"G") ./clone_or_pull "$program" ~/workspace/"$program" && sudo make clean install;;
+	"G") git_install "$program";;
 	*) sudo apt-get install "$program" -y;;
     esac
 done < /tmp/programs.csv
