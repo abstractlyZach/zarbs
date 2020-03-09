@@ -51,3 +51,4 @@ tag,program name, comments
 ,python3-pip,
 P3,ueberzug,for previewing files in ranger
 G,https://github.com/ranger/ranger.git,file manager with vim bindings
+,exuberant-ctags,tags for jumping and autocompletion programming projects
