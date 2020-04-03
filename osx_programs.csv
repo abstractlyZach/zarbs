@@ -5,7 +5,7 @@ T,koekeishiya/formulae,tap for yabai
 ,yabai,tiling window manager
 ,koekeishiya/formulae/skhd,picks up keypresses and allows you to bind them
 ,coreutils,GNU core utilities. ex. BSD's ls doesn't support long flags
-,findutils,GNU finder utils (find, xargs, locate)
+,findutils,GNU finder utils (find and xargs and locate)
 ,postgresql,
 ,entr,for automatically doing stuff when files change. good for doing an auto-compile type workflow
 ,terminal-notifier,create notifications on OSX!
