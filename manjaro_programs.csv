@@ -1,3 +1,4 @@
+tag,program name,comments
 ,brave
 ,make
 ,pkg-config
@@ -15,3 +16,11 @@ P,virtualenvwrapper
 ,fzf
 ,neofetch
 ,xclip
+,tree
+,dunst
+,zathura
+,screenkey
+,zsh-syntax-highlighting
+,base-devel,basic development tools for installing stuff from AUR
+,feh,image viewer
+A,lf-git,file manager
