@@ -14,8 +14,12 @@ git_install() {
     cd -
 }
 
-aur_install() { 
+pacman_install() {
     pacman --noconfirm --needed --sync "$1" 
+}
+
+aur_install() { 
+    yay -S --noconfirm "$1"
 }
 
 pip_install() { 
@@ -32,6 +36,7 @@ while IFS="," read -r tag program comment; do
     case "$tag" in
 	"G") git_install "$program";;
 	"P") pip_install "$program";;
+	"A") aur_install "$program";;
 	*) aur_install "$program";;
     esac
 done < "${tempfile}"
