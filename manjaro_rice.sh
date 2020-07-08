@@ -5,6 +5,8 @@
 set -x # echo commands
 set -e # exit on failure
 
+name="zach"
+
 git_install() {
     program_name="$(basename $1 '.git')"
     target_directory=~/workspace/"$program_name"
@@ -15,11 +17,13 @@ git_install() {
 }
 
 pacman_install() {
+    pacman -Q "$1" 2>/dev/null || \
     pacman --noconfirm --needed --sync "$1" 
 }
 
 aur_install() { 
-    yay -S --noconfirm "$1"
+    pacman -Q "$1" 2>/dev/null || \
+    sudo -u "$name" yay -S --noconfirm "$1"
 }
 
 pip_install() { 
@@ -30,7 +34,7 @@ tempfile="${HOME}/.cache/programs.csv"
 
 # ignore the first line (headers)
 # https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
-tail -n +2 manjaro_programs.csv > "${tempfile}"
+tail -n +2 manjaro_programs.csv | sed '/^#/d' > "${tempfile}"
 
 while IFS="," read -r tag program comment; do
     case "$tag" in
