@@ -25,7 +25,7 @@ P,virtualenvwrapper
 ,zsh-syntax-highlighting
 ,feh,image viewer
 A,lf-git,file manager
-A,libxft-bgra,viewing emojis in st dwm and dmenu
+#A,libxft-bgra,viewing emojis in st dwm and dmenu
 ,noto-fonts-emoji,emoji font
 A,spotifyd,a daemon for streaming spotify data
 A,spotify-tui,run spotify from the terminal
