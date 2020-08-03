@@ -1,4 +1,6 @@
 tag,program name,comments
+,base-devel,basic development tools for installing stuff from AUR
+,yay,AUR install helper
 ,brave
 ,make
 ,pkg-config
@@ -21,7 +23,6 @@ P,virtualenvwrapper
 ,zathura
 ,screenkey
 ,zsh-syntax-highlighting
-,base-devel,basic development tools for installing stuff from AUR
 ,feh,image viewer
 A,lf-git,file manager
 A,libxft-bgra,viewing emojis in st dwm and dmenu
