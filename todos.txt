@@ -1,5 +1,7 @@
 - script in dotfiles download
 - fix commented out lines in manjaro programs
+- add python virtual setup
+- download utils 
 - add this to /usr/share/xsessions/dwm.desktop
 [Desktop Entry]
 Encoding=UTF-8
