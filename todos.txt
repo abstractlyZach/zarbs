@@ -1,0 +1,2 @@
+- script in dotfiles download
+- fix commented out lines in manjaro programs
