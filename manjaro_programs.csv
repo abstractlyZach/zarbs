@@ -32,3 +32,5 @@ A,spotify-tui,run spotify from the terminal
 ,pandoc,document converter
 G,https://github.com/ytdl-org/youtube-dl.git,
 A,mpv-git,media player
+G,https://github.com/abstractlyzach/dwm,window manager
+G,https://github.com/abstractlyzach/st,simple terminal
