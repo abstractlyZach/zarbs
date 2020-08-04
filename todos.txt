@@ -5,6 +5,7 @@
 - figure out how pyenv and virtualenvwrapper work together
 - add pyenv to installation
 - add pyenv shim to zshrc
+- disable python history https://unix.stackexchange.com/questions/121377/how-can-i-disable-the-new-history-feature-in-python-3-4
 - add this to /usr/share/xsessions/dwm.desktop
 [Desktop Entry]
 Encoding=UTF-8
