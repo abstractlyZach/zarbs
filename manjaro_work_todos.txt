@@ -1,1 +1,2 @@
 - create workspace directories and clone projects
+- redo insights local python setup
