@@ -26,6 +26,7 @@ P,virtualenvwrapper
 ,feh,image viewer
 A,lf-git,file manager
 #A,libxft-bgra,viewing emojis in st dwm and dmenu
+A,libxft-bgra-git,same as line above but there was a gpg issue 2020-07
 ,noto-fonts-emoji,emoji font
 A,spotifyd,a daemon for streaming spotify data
 A,spotify-tui,run spotify from the terminal
@@ -34,3 +35,5 @@ G,https://github.com/ytdl-org/youtube-dl.git,
 A,mpv-git,media player
 G,https://github.com/abstractlyzach/dwm,window manager
 G,https://github.com/abstractlyzach/st,simple terminal
+G,https://github.com/lukesmithxyz/dmenu,general-purpose menu
+G,https://github.com/abstractlyzach/dwmblocks,status bar for window manager
