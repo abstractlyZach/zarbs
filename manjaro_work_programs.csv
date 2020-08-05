@@ -1,2 +1,6 @@
 A,slack-desktop,
 A,pyenv-git,manage multiple python versions
+,redis,
+A,postgresql-9.6,
+A,pulse-secure,VPN for autodesk corporate network
+A,webkitgtk,GUI dependency for pulse-secure

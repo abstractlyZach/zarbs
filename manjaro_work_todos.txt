@@ -1,2 +1,7 @@
 - create workspace directories and clone projects
 - redo insights local python setup
+- add psql and redis instructions
+    - https://unix.stackexchange.com/questions/294926/unable-to-start-posgtresql-the-reason-isnt-clear
+    - systemctl start redis
+- add Zach as a trusted admin on psql
+- add instructions for pulse
