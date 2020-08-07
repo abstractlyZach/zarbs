@@ -44,3 +44,9 @@ while IFS="," read -r tag program comment; do
 	*) aur_install "$program";;
     esac
 done < "${tempfile}"
+
+# install neovim's python provider
+pyenv install --skip-existing 3.8.5
+pyenv virtualenv 3.8.5 nvim
+source "$(pyenv root)/versions/nvim/bin/activate"
+pip install neovim
