@@ -37,3 +37,6 @@ G,https://github.com/abstractlyzach/dwm,window manager
 G,https://github.com/abstractlyzach/st,simple terminal
 G,https://github.com/lukesmithxyz/dmenu,general-purpose menu
 G,https://github.com/abstractlyzach/dwmblocks,status bar for window manager
+,github-cli,cli for github
+A,zoom,Zoom client for video conferencing
+A,pyenv-git,manage multiple python versions
