@@ -45,8 +45,12 @@ while IFS="," read -r tag program comment; do
     esac
 done < "${tempfile}"
 
+# download pyenv-virtualenv to the pyenv plugins folder
+virtualenv_dir="$(pyenv root)/plugins/pyenv-virtualenv"
+[ ! -d "$virtualenv_dir" ] && git clone https://github.com/pyenv/pyenv-virtualenv.git "$virtualenv_dir"
+
 # install neovim's python provider
 pyenv install --skip-existing 3.8.5
-pyenv virtualenv 3.8.5 nvim
+pyenv virtualenvs | grep "nvim" >/dev/null || pyenv virtualenv 3.8.5 nvim
 source "$(pyenv root)/versions/nvim/bin/activate"
 pip install neovim
