@@ -43,3 +43,4 @@ A,pyenv-git,manage multiple python versions
 ,cowsay,make a cow say stuff on the CLI
 A,fortune-mod,random quotes
 A,sddm,simple display manager to log in
+A,lazygit,a git UI for lazy people
