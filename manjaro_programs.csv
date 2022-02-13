@@ -10,18 +10,14 @@ tag,program name,comments
 ,xorg-xinit
 ,xorg
 ,sxhkd
-,dunst
 ,zsh
 ,python-pip
 P,virtualenvwrapper
 ,fd
 ,fzf
 ,neofetch
-,xclip
 ,tree
-,dunst
 ,zathura
-,screenkey
 ,zsh-syntax-highlighting
 ,feh,image viewer
 A,lf-git,file manager
@@ -33,10 +29,6 @@ A,spotify-tui,run spotify from the terminal
 ,pandoc,document converter
 G,https://github.com/ytdl-org/youtube-dl.git,
 A,mpv-git,media player
-G,https://github.com/abstractlyzach/dwm,window manager
-G,https://github.com/abstractlyzach/st,simple terminal
-G,https://github.com/lukesmithxyz/dmenu,general-purpose menu
-G,https://github.com/abstractlyzach/dwmblocks,status bar for window manager
 ,github-cli,cli for github
 A,zoom,Zoom client for video conferencing
 A,pyenv-git,manage multiple python versions
