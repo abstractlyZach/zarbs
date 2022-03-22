@@ -38,12 +38,6 @@ wget "https://github.com/sharkdp/fd/releases/download/v7.5.0/fd_7.5.0_amd64.deb"
 sudo dpkg -i $fd_file
 rm $fd_file
 
-# install spaceship prompt for zsh.
-# normally I would write this in the loop like the other programs
-# but it has unsafe perms and I don't quite know how unsafe that is.
-# so I think it makes sense to keep this in its own area
-sudo npm install -g spaceship-prompt --unsafe-perm=true
-
 # install the brave browser
 sudo apt install apt-transport-https curl
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -

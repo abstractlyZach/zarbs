@@ -44,7 +44,6 @@ tag,program name, comments
 ,zathura,pdf-viewer
 ,fonts-symbola,fonts for emojis in st
 ,stow,symlink manager. used in the dotfiles repo at ~/.config
-,npm,node package manager
 ,pandoc,markup converter
 ,texlive-xetex,pdflatex for converting stuff to pdf
 ,/tmp/parsec.deb,remote desktop controller
