@@ -1,66 +1,51 @@
 #!/usr/bin/env sh
 
-set -e # exit on errors
+# install all the programs in programs.csv
+
 set -x # echo commands
+set -e # exit on failure
 
-alias clone_or_pull=$(realpath clone_or_pull)
-dotfiles_repo="https://github.com/abstractlyZach/dotfiles.git"
+name="zach"
 
+git_install() {
+    program_name="$(basename $1 '.git')"
+    target_directory=~/workspace/"$program_name"
+    ./clone_or_pull "$1" "$target_directory" 
+    cd "$target_directory"
+    sudo make clean install
+    cd -
+}
 
-# prompt user for sudo immediately instead of having to wait
-# using this approach because I don't know a better one
-sudo ls >/dev/null
+pacman_install() {
+    pacman -Q "$1" 2>/dev/null || \
+    pacman --noconfirm --needed --sync "$1" 
+}
 
-# disable sleep on lid-close
-# todo: https://unix.stackexchange.com/questions/52643/how-to-disable-auto-suspend-when-i-close-laptop-lid
+aur_install() { 
+    pacman -Q "$1" 2>/dev/null || \
+    sudo -u "$name" yay -S --noconfirm "$1"
+}
 
-# add new stable version of nvim. for some reason the one on apt uses 0.2.2 which has a bug with cursor shapes in st -_-
-sudo add-apt-repository ppa:neovim-ppa/stable -y
-sudo apt-get update
+pip_install() { 
+    pip install "$1" 
+}
 
-./ubuntu_install_programs
+pipx_install() {
+    pipx install "$1"
+}
 
-sudo snap install spotify
-sudo apt autoremove -y
+tempfile="${HOME}/.cache/programs.csv"
 
-pip install virtualenvwrapper
+# ignore the first line (headers)
+# https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
+tail -n +2 programs.csv | sed '/^#/d' > "${tempfile}"
 
-# TODO: make the git clone for config clobber the old .config dir.
-
-# Install the dotfiles in the user's home directory
-config_directory="$HOME/.config"
-clone_or_pull "$dotfiles_repo" "$config_directory"
-cd "$config_directory"
-# TODO: clean out the old .profile file
-make
-
-# set capslock to escape
-sudo sed -i 's/\(\s*key <CAPS>.*\)\(Caps_Lock\)/\1Escape/g' /usr/share/X11/xkb/symbols/pc
-
-
-# TODO figure out how to get github access
-dwm_dir=~/workspace/dwm
-clone_or_pull "git@github.com:abstractlyZach/dwm.git" "$dwm_dir"
-cd "$dwm_dir"
-sed -i 's/^CC = cc$/CC = gcc-8/g' config.mk
-sudo make clean install
-# I forgot which site I read this on, but it'll make it add the right file to the right place
-sudo apt-get install dwm -y
-
-st_dir=~/workspace/st
-clone_or_pull "git@github.com:abstractlyZach/st.git" "$st_dir"
-cd "$st_dir"
-sudo make clean install
-
-sxhkd_dir=~/workspace/sxhkd
-clone_or_pull "https://github.com/baskerville/sxhkd.git" "$sxhkd_dir"
-cd "$sxhkd_dir"
-sudo make clean
-sudo make
-sudo make install
-
-clone_or_pull "git@github.com:abstractlyZach/utils.git" ~/bin
-
-
-echo "Complete!"
-echo
+while IFS="," read -r tag program comment; do
+    case "$tag" in
+	"G") git_install "$program";;
+	"P") pip_install "$program";;
+	"PX") pipx_install "$program";;
+	"A") aur_install "$program";;
+	*) aur_install "$program";;
+    esac
+done < "${tempfile}"

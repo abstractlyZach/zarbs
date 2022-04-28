@@ -1,0 +1,28 @@
+tag,program name,comments
+,base-devel,basic development tools for installing stuff from AUR
+,yay,AUR install helper
+,make
+,pkg-config
+,stow
+,zsh
+,python-pip
+P,pipx,isolated pip package installations
+,fd
+,fzf
+,neofetch
+,tree
+,zathura
+,zsh-syntax-highlighting
+,feh,image viewer
+,noto-fonts-emoji,emoji font
+,pandoc,document converter
+PX,youtube-dl
+A,mpv-git,media player
+,github-cli,cli for github
+A,pyenv-git,manage multiple python versions
+,cowsay,make a cow say stuff on the CLI
+A,fortune-mod,random quotes
+A,lazygit,a git UI for lazy people
+A,htop
+A,brightnessctl,controls screen brightness
+A,texlive-latex-base,plugins to let pandoc convert to pdf
