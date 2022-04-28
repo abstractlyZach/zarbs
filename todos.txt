@@ -1,3 +1,0 @@
-- script in dotfiles download
-- figure out how to replace libxft without confirmation
-- download bin files 
