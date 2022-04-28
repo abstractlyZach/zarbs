@@ -1,5 +1,0 @@
-A,slack-desktop,
-,redis,
-A,postgresql-9.6,
-A,pulse-secure,VPN for autodesk corporate network
-A,webkitgtk,GUI dependency for pulse-secure
